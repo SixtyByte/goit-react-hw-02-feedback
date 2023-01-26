@@ -1,4 +1,4 @@
-import Section from `./Section/Section`
+import Sections from "./Section/Sections"
 export const App = () => {
   return (
     <div
@@ -11,7 +11,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-     <Section>
+       <Sections good={1} neutral={2} bad={2} total={3} positivePercentage={3}/>
     </div>
   );
 };
