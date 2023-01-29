@@ -17,7 +17,6 @@ class App extends React.Component {
   
   
  goodFeedback=()=>{this.setState((prevState)=>{return{good:prevState.good+1}})};
- 
  neutralFeedback=()=>{this.setState((prevState)=>{return{neutral:prevState.neutral+1}})};
  badFeedback=()=>{this.setState((prevState)=>{return{bad:prevState.bad+1}})}
  countTotalFeedback=()=>{this.setState((prevState)=>{ return {total:prevState.good+prevState.neutral+prevState.bad, } })}
@@ -26,13 +25,14 @@ class App extends React.Component {
       
      <div class="description">
      <Section tittle={"Please leave feedback"}/>
- <FeedbackOption/>
+ <FeedbackOption good={this.goodFeedback} bad={this.badFeedback} neutral={this.neutralFeedback} total={this.countTotalFeedback} percent={this.positivePercentage} onLeaveFeedback={0}/>
 
 <Section tittle={"Statistic"}/>
-<Statistic/>
+<Statistic good={this.state.good} neutral={this.state.neutral}  bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positivePercentage}/>
      </div>
     
    </div>}};
+
    export default App;
    
  

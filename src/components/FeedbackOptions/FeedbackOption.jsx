@@ -1,6 +1,6 @@
 import React from "react";
 
-const FeedbackOption=({options,onLeaveFeedback})=>(<div className="contol"><button type="button" onClick={()=>{this.goodFeedback();this.countTotalFeedback();this.positivePercentage()}}  className="control">Good</button>
-<button type="button" className="control" onClick={()=>{this.neutralFeedback();this.countTotalFeedback();this.positivePercentage()}}>Neutral</button>
-<button type="button" className="control" onClick={()=>{this.badFeedback();this.countTotalFeedback();this.positivePercentage()}}>Bad</button></div>);
+const FeedbackOption=({good, bad, neutral, total, percent,onLeaveFeedback})=>(<div className="contol"><button type="button" onClick={()=>{good();total();percent()}}  className="control">Good</button>
+<button type="button" className="control" onClick={()=>{neutral();total();percent()}}>Neutral</button>
+<button type="button" className="control" onClick={()=>{bad();total();percent()}}>Bad</button></div>);
 export default FeedbackOption
