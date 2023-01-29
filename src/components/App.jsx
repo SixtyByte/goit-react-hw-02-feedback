@@ -11,7 +11,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-       <Sections good={1} neutral={2} bad={2} total={3} positivePercentage={3}/>
+       <Sections good={1} neutral={2} bad={2} />
     </div>
   );
 };
